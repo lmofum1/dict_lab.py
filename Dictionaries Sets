@@ -1,0 +1,49 @@
+# Part 1
+# Create dictionary
+data = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
+print(data)
+
+# Delete 'cake' entry
+del data["cake"]
+print(data)
+
+# Add 'fruit' entry
+data["fruit"] = "Mango"
+print(data)
+
+# Display dictionary keys and values
+print(data.keys())
+print(data.values())
+
+# Check if 'cake' is a key
+print("cake" in data)
+
+# Check if 'Mango' is a value
+print("Mango" in data.values())
+
+# Part 2
+# Count 't' in each value
+data_t_count = {key: value.lower().count('t') for key, value in data.items()}
+print(data_t_count)
+
+# Part 3
+# Create sets divisible by 2, 3, and 4
+s2 = {x for x in range(21) if x % 2 == 0}
+s3 = {x for x in range(21) if x % 3 == 0}
+s4 = {x for x in range(21) if x % 4 == 0}
+
+print(s2, s3, s4)
+
+# Check subsets
+print(s3.issubset(s2))
+print(s4.issubset(s2))
+
+# Part 4
+# Create sets with letters
+python_set = set("Python")
+python_set.add("i")
+marathon_frozenset = frozenset("marathon")
+
+# Display union and intersection
+print(python_set.union(marathon_frozenset))
+print(python_set.intersection(marathon_frozenset))
